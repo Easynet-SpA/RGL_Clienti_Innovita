@@ -1,0 +1,59 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Innovita", "Innovita\Innovita.vbproj", "{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "InnovitaAddOn", "InnovitaAddOn\InnovitaAddOn.vbproj", "{CA61DE94-9FB9-4DD1-943F-218777612B52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnovitaResource", "InnovitaResource\InnovitaResource.csproj", "{4744FB53-F46D-4FA5-8C21-508220E1B4D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnovitaBarcodes", "InnovitaBarcodes\InnovitaBarcodes.csproj", "{298C48DE-4C77-4B50-B70B-01408547AA99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnovitaEtichette", "InnovitaEtichette\InnovitaEtichette.csproj", "{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		x64|Any CPU = x64|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}.Release|Any CPU.ActiveCfg = x64|Any CPU
+		{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}.Release|Any CPU.Build.0 = x64|Any CPU
+		{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}.x64|Any CPU.ActiveCfg = x64|Any CPU
+		{D24A2AF6-48AB-4F7E-BE0B-0F36D652CB4B}.x64|Any CPU.Build.0 = x64|Any CPU
+		{CA61DE94-9FB9-4DD1-943F-218777612B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA61DE94-9FB9-4DD1-943F-218777612B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA61DE94-9FB9-4DD1-943F-218777612B52}.Release|Any CPU.ActiveCfg = x64|Any CPU
+		{CA61DE94-9FB9-4DD1-943F-218777612B52}.Release|Any CPU.Build.0 = x64|Any CPU
+		{CA61DE94-9FB9-4DD1-943F-218777612B52}.x64|Any CPU.ActiveCfg = x64|Any CPU
+		{CA61DE94-9FB9-4DD1-943F-218777612B52}.x64|Any CPU.Build.0 = x64|Any CPU
+		{4744FB53-F46D-4FA5-8C21-508220E1B4D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4744FB53-F46D-4FA5-8C21-508220E1B4D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4744FB53-F46D-4FA5-8C21-508220E1B4D0}.Release|Any CPU.ActiveCfg = x64|Any CPU
+		{4744FB53-F46D-4FA5-8C21-508220E1B4D0}.Release|Any CPU.Build.0 = x64|Any CPU
+		{4744FB53-F46D-4FA5-8C21-508220E1B4D0}.x64|Any CPU.ActiveCfg = x64|Any CPU
+		{4744FB53-F46D-4FA5-8C21-508220E1B4D0}.x64|Any CPU.Build.0 = x64|Any CPU
+		{298C48DE-4C77-4B50-B70B-01408547AA99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{298C48DE-4C77-4B50-B70B-01408547AA99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{298C48DE-4C77-4B50-B70B-01408547AA99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{298C48DE-4C77-4B50-B70B-01408547AA99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{298C48DE-4C77-4B50-B70B-01408547AA99}.x64|Any CPU.ActiveCfg = Release|Any CPU
+		{298C48DE-4C77-4B50-B70B-01408547AA99}.x64|Any CPU.Build.0 = Release|Any CPU
+		{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}.x64|Any CPU.ActiveCfg = Release|Any CPU
+		{F6382BBC-FCD8-4DFF-94DD-280238D8BDB9}.x64|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B32543D7-7B68-4F94-A5A3-EAAD03A882A1}
+	EndGlobalSection
+EndGlobal

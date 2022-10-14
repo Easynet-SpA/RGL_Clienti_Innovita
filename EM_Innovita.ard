@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AddOnRegData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlientInstallation="No" SlientUpgrade="No" Partnernmsp="RGL" SchemaVersion="3.0" Type="" MultipleVersion="false" OnDemand="" OnPremise="" ExtName="Innovita" ExtVersion="1.0" Contdata="http://www.rgl-informatica.com" Partner="Rgl Informatica" DBType="Both" ClientType="W">
+  <Validity>
+    <SBOCompatibility>
+      <Version From="" To="" />
+    </SBOCompatibility>
+  </Validity>
+  <Configuration>
+    <Repository />
+    <Deployment>
+      <Properties>
+        <Property Name="DBUserName" Value="SYSTEM" Description="Nome utente accesso database" Configurable="true" />
+        <Property Name="DBUserPassword" Value="2022PurSap07!" Description="Password utente accesso database" Configurable="true" />
+      </Properties>
+    </Deployment>
+    <Assignment>
+      <Properties />
+    </Assignment>
+  </Configuration>
+  <Addons>
+    <Addon Name="" Group="" ForceFlag="" Visible="" AutoAssign="" SelfUpgrd="">
+      <x86 AddonExe="D:\Sviluppo\RGL_Clienti_Innovita\InnovitaAddOn\bin\InnovitaAddOn.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="InnovitaAddOn.exe">
+              <Actions />
+            </File>
+            <File FileName="InnovitaAddOn.exe.config">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImports.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImportsHANA.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR_930140.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="InnovitaAddOn.exe">
+              <Actions />
+            </File>
+            <File FileName="InnovitaAddOn.exe.config">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImports.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImportsHANA.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR_930140.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x86>
+      <x64 AddonExe="D:\Sviluppo\RGL_Clienti_Innovita\InnovitaAddOn\bin\x64\InnovitaAddOn.exe" AddonSig="">
+        <Installation>
+          <Files>
+            <File FileName="InnovitaAddOn.exe">
+              <Actions />
+            </File>
+            <File FileName="InnovitaAddOn.exe.config">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImports.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImportsHANA.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR_930140.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Installation>
+        <Uninstallation>
+          <Files>
+            <File FileName="InnovitaAddOn.exe">
+              <Actions />
+            </File>
+            <File FileName="InnovitaAddOn.exe.config">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbobsCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="Interop.SAPbouiCOM.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImports.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBaseImportsHANA.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR.dll">
+              <Actions />
+            </File>
+            <File FileName="SBOBase_CR_930140.dll">
+              <Actions />
+            </File>
+          </Files>
+        </Uninstallation>
+      </x64>
+    </Addon>
+  </Addons>
+  <XApps>
+    <XApp Name="" Path="" FileName="" />
+  </XApps>
+  <UDQs>
+    <UDQ udqname="">
+      <Hana FileName="" />
+    </UDQ>
+  </UDQs>
+</AddOnRegData>

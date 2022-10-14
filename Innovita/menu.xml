@@ -1,0 +1,18 @@
+<Application>
+	<Menus>
+		<action type="add">
+
+			<Menu FatherUID="43523" Position="0" Enabled="0" String="Configurazione personalizzazione"	Type="1" UniqueID="RGL_INNO_01" />
+
+			<Menu FatherUID="3072" Enabled="1" Position="1" String="Stampa etichette articolo" Type="1" UniqueID="RGL_INNO_03"/>
+
+			<Menu FatherUID="43520" Enabled="1" Position="50" String="Innovita" Image="$Rgl.Innovita.logo.png$"  Type="2" UniqueID="RGL_INNO_00"/>
+			
+			<Menu FatherUID="RGL_INNO_00" Enabled="1" Position="30" String="Utility" Type="2" UniqueID="RGL_INNO_30"/>
+			<!--<Menu FatherUID="RGL_INNO_03" Position="20" Enabled="0" String="Estrai form abbinati ad UDO" Type="1" UniqueID="RGL_INNO_04" />
+			<Menu FatherUID="RGL_INNO_03" Position="40" Enabled="0" String="Importa form abbinati ad UDO" Type="1" UniqueID="RGL_INNO_05" />-->
+			<Menu FatherUID="RGL_INNO_30" Position="50" Enabled="0" String="Importa layou di stampa" Type="1" UniqueID="RGL_INNO_18" />
+			
+		</action>
+	</Menus>
+</Application>
