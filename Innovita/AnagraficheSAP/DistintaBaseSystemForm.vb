@@ -52,16 +52,14 @@ Namespace AnagraficheSAP
 
                     oMenus = parent.GetAppl.Menus.Item("RGL_INNO_DB_00").SubMenus
 
-                    If oitt.GetValue("Code", 0).Trim.Contains(".") Then
-                        If Not parent.GetAppl.Menus.Exists("RGL_INNO_DB_02") Then
-                            oCreationPackage = parent.GetAppl.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_MenuCreationParams)
-                            oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING
-                            oCreationPackage.UniqueID = "RGL_INNO_DB_02"
-                            oCreationPackage.Position = 10
-                            oCreationPackage.String = "Crea nuova revisione"
-                            oCreationPackage.Enabled = True
-                            oMenus.AddEx(oCreationPackage)
-                        End If
+                    If Not parent.GetAppl.Menus.Exists("RGL_INNO_DB_02") Then
+                        oCreationPackage = parent.GetAppl.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_MenuCreationParams)
+                        oCreationPackage.Type = SAPbouiCOM.BoMenuType.mt_STRING
+                        oCreationPackage.UniqueID = "RGL_INNO_DB_02"
+                        oCreationPackage.Position = 10
+                        oCreationPackage.String = "Crea nuova revisione"
+                        oCreationPackage.Enabled = True
+                        oMenus.AddEx(oCreationPackage)
                     End If
 
                     If mtx.Columns.Item(mtx.GetCellFocus.ColumnIndex).UniqueID = "1" AndAlso Not parent.GetAppl.Menus.Exists("RGL_INNO_DB_01") Then

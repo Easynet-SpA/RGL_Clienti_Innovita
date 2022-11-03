@@ -79,6 +79,15 @@ namespace InnovitaResource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Impossibile recuperare la folder per la famiglia {0}.
+        /// </summary>
+        public static string ImpossibileRecuperareFolderFamiglia {
+            get {
+                return ResourceManager.GetString("ImpossibileRecuperareFolderFamiglia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Impossibile stampare l&apos;etichetta.
         /// </summary>
         public static string ImpossibileStampare {

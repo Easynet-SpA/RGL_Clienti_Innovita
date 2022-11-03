@@ -123,6 +123,9 @@
   <data name="ImpossibileCreareBom" xml:space="preserve">
     <value>Impossibile creare la distinta base {0}. {1}</value>
   </data>
+  <data name="ImpossibileRecuperareFolderFamiglia" xml:space="preserve">
+    <value>Impossibile recuperare la folder per la famiglia {0}</value>
+  </data>
   <data name="ImpossibileStampare" xml:space="preserve">
     <value>Impossibile stampare l'etichetta</value>
   </data>

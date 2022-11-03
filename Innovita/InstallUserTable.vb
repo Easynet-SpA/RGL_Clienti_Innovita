@@ -22,26 +22,24 @@ Public Class InstallUserTable
 
     '------------------------------------------------------------------------------------------------------
     '------------------------------------------------------------------------------------------------------
+
     Protected Overrides Function InstallUpdateCompany(ByVal oldMajor As Integer, ByVal oldMinor As Integer, ByVal newMajor As Integer, ByVal newMinor As Integer) As Boolean
         Dim tableName As String
 
-
         If True Then
-
             Try
-
-
+                AggiungiCampoAlpha("OITB", "RGL_INNO_IDF", "Id folder su anagrafica articoli", 27)
             Catch ex As Exception
                 RglFwk.SBOBase.Util.Log(ex)
             End Try
-
         End If
-
 
         Return True
     End Function
+
     '----------------------------------------------------------------------------------
     '----------------------------------------------------------------------------------
+
     Public Sub ImportaForms()
 
 

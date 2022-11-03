@@ -29,6 +29,6 @@ Imports System.Runtime.InteropServices
 ' � possibile specificare tutti i valori oppure impostare valori predefiniti per i numeri relativi alla revisione e alla build
 ' utilizzando il carattere "*" come mostrato di seguito:
 
-<Assembly: AssemblyVersion("1.4.0.0")>
-<Assembly: AssemblyFileVersion("1.4.0.0")>
+<Assembly: AssemblyVersion("1.6.0.0")>
+<Assembly: AssemblyFileVersion("1.6.0.0")>
 <Assembly: ComVisible(False)>

@@ -65,7 +65,9 @@ Public Class Innovita
             '---------------------------------------------------------------------------------------------
             ' Articoli e Bom
             '---------------------------------------------------------------------------------------------
-            'parent.InstallSystemForm(SBOBase.SBODefaultSystemFormHandler.NewHandler(parent, SBOBase.SBOConstant.ARTICOLI.FormType, GetType(AnagraficheSAP.ArticoliSystemForm)))
+
+            parent.InstallSystemForm(SBOBase.SBODefaultSystemFormHandler.NewHandler(parent, SBOBase.SBOConstant.ARTICOLI.FormType, GetType(AnagraficheSAP.ArticoliSystemForm)))
+
             parent.InstallSystemForm(SBOBase.SBODefaultSystemFormHandler.NewHandler(parent, SBOBase.SBOConstant.DISTINTA_BASE.FormType, GetType(AnagraficheSAP.DistintaBaseSystemForm)))
             parent.InstallSystemForm(SBOBase.SBODefaultSystemFormHandler.NewHandler(parent, 1880000003, GetType(AnagraficheSAP.GestioneDistintaBaseSystemForm)))
 

@@ -62,22 +62,32 @@ Namespace AnagraficheSAP
         '-------------------------------------------------------------------------------------------
         '-------------------------------------------------------------------------------------------
         Public Shared Function CreaRevisione(itemCode As String) As String
+            SBOBase.SBOMain.GetAddOnInstance.GetCompany.XmlExportType = SAPbobsCOM.BoXmlExportTypes.xet_ExportImportMode
+            SBOBase.SBOMain.GetAddOnInstance.GetCompany.XMLAsString = True
 
             Dim rev As Integer = 0
-            Dim srev As String = itemCode.Substring(itemCode.IndexOf(".") + 1)
-            Dim baseItemCode As String = itemCode.Substring(0, itemCode.IndexOf("."))
+            Dim baseItemCode As String
+            Dim srev As String
 
-            If Not Integer.TryParse(srev, rev) Then Throw New Exception(String.Format(InnovitaResource.Messaggi.RevisioneNoNumero, srev))
+            If itemCode.Contains(".") Then
+                srev = itemCode.Substring(itemCode.IndexOf(".") + 1)
+                baseItemCode = itemCode.Substring(0, itemCode.IndexOf("."))
+                If Not Integer.TryParse(srev, rev) Then Throw New Exception(String.Format(InnovitaResource.Messaggi.RevisioneNoNumero, srev))
+            Else
+                baseItemCode = itemCode
+            End If
 
             Dim rs As New SBORecordset
 
             rs.DoQuery($"SELECT MAX(""ItemCode"") AS ""ItemCode"" FROM OITM WHERE ""ItemCode"" LIKE '{baseItemCode}.__'")
-            If Not rs.EoF Then
-                srev = rs.AsString("ItemCode").Substring(itemCode.IndexOf(".") + 1)
+            If Not rs.EoF AndAlso rs.AsString("ItemCode") <> "" Then
+                srev = rs.AsString("ItemCode").Substring(rs.AsString("ItemCode").IndexOf(".") + 1)
                 If Not Integer.TryParse(srev, rev) Then Throw New Exception(String.Format(InnovitaResource.Messaggi.RevisioneNoNumero, srev))
+                rev += 1
+            Else
+                rev = Config.RevisioneBase.Valore
             End If
 
-            rev += 1
             Dim revItemCode = $"{baseItemCode}.{rev:00}"
 
 
@@ -87,12 +97,20 @@ Namespace AnagraficheSAP
 
                 rs.DoQuery($"SELECT ""ItemName"" FROM OITM WHERE ""ItemCode"" = '{baseItemCode}'")
 
-                oitm.ItemCode = revItemCode
+                oitm.GetByKey(itemCode)
+
+                Dim xml = oitm.GetAsXML
+
+                xml = xml.Replace(itemCode, revItemCode)
+
+                oitm = SBOMain.GetAddOnInstance.GetCompany.GetBusinessObjectFromXML(xml, 0)
+
+                'oitm.ItemCode = revItemCode
                 oitm.ItemName = $"{rs.AsString("ItemName")} - rev. {rev:#}"
-                oitm.IsPhantom = SAPbobsCOM.BoYesNoEnum.tYES
-                oitm.InventoryItem = SAPbobsCOM.BoYesNoEnum.tNO
-                oitm.SalesItem = SAPbobsCOM.BoYesNoEnum.tNO
-                oitm.PurchaseItem = SAPbobsCOM.BoYesNoEnum.tNO
+                'oitm.IsPhantom = SAPbobsCOM.BoYesNoEnum.tYES
+                'oitm.InventoryItem = SAPbobsCOM.BoYesNoEnum.tNO
+                'oitm.SalesItem = SAPbobsCOM.BoYesNoEnum.tNO
+                'oitm.PurchaseItem = SAPbobsCOM.BoYesNoEnum.tNO
 
                 If oitm.Add <> 0 Then Throw New Exception(String.Format(InnovitaResource.Messaggi.ImpossibileCreareArticolo, revItemCode, SBOBase.SBOMain.GetAddOnInstance.GetCompany.GetLastErrorDescription))
             End If
@@ -104,8 +122,6 @@ Namespace AnagraficheSAP
 
                 bom.GetByKey(itemCode)
 
-                SBOBase.SBOMain.GetAddOnInstance.GetCompany.XmlExportType = SAPbobsCOM.BoXmlExportTypes.xet_ExportImportMode
-                SBOBase.SBOMain.GetAddOnInstance.GetCompany.XMLAsString = True
                 Dim xml = bom.GetAsXML
 
                 xml = xml.Replace(itemCode, revItemCode)
@@ -118,14 +134,15 @@ Namespace AnagraficheSAP
                 bom = SBOMain.GetAddOnInstance.GetCompany.GetBusinessObjectFromXML(xml, 0)
                 bom.Project = "NUOVA"
                 bom.Items.SetCurrentLine(0)
-                bom.Items.LineText = $"REV. {rev} - {Today:dd/MM/yyyy}"
-
+                If bom.Items.ItemType = SAPbobsCOM.ProductionItemType.pit_Text Then
+                    bom.Items.LineText = $"REV. {rev} - {Today:dd/MM/yyyy}"
+                End If
 
                 If bom.Add <> 0 Then Throw New Exception(String.Format(InnovitaResource.Messaggi.ImpossibileCreareBom, revItemCode, SBOBase.SBOMain.GetAddOnInstance.GetCompany.GetLastErrorDescription))
-            End If
+                End If
 
 
-            Return revItemCode
+                Return revItemCode
         End Function
 
     End Class
