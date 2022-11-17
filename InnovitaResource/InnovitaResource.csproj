@@ -89,5 +89,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Etichette\etichetta-articolo.srf" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Analitycs\RGL_IN_ANALISI_VENDITE.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
