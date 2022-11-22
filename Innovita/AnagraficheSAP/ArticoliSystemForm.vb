@@ -32,7 +32,7 @@ Namespace AnagraficheSAP
 
             ' ELENCO DELLE FAMIGLIE E FOLDER COLLEGATI
             Dim rs As New SBORecordset
-            rs.DoQuery($"SELECT ""ItmsGrpCod"", ""U_RGL_INNO_IDF""  FROM ""OITB""")
+            rs.DoQuery($"SELECT ""ItmsGrpCod"", ""U_RGL_INNO_IDF"" FROM ""OITB""")
             If rs.EoF Then Return
             While Not rs.EoF
                 Try
@@ -63,12 +63,13 @@ Namespace AnagraficheSAP
 
         Private Sub ArticoliSystemForm_OnFormDataEvent(ByRef objData As BusinessObjectInfo, ByRef BubbleEvent As Boolean) Handles Me.OnFormDataEvent
             If Not objData.BeforeAction AndAlso objData.EventType = BoEventTypes.et_FORM_DATA_LOAD Then
-                Log("ArticoliSystemForm_OnFormDataEvent")
+                'Log("ArticoliSystemForm_OnFormDataEvent")
 
                 '-------------------------------------------------------------------------------------
                 '-------------------------------------------------------------------------------------
 
                 BlockEventi()
+
                 Try
 
                     GestioneCampiUtente()
@@ -90,7 +91,7 @@ Namespace AnagraficheSAP
 
         Private Sub ArticoliSystemForm_OnItemEvent(ByRef pVal As ItemEvent, ByRef BubbleEvent As Boolean) Handles Me.OnItemEvent
             If Not pVal.BeforeAction AndAlso pVal.ItemUID = "39" AndAlso pVal.EventType = BoEventTypes.et_COMBO_SELECT Then
-                Log("ArticoliSystemForm_OnItemEvent")
+                'Log("ArticoliSystemForm_OnItemEvent")
 
                 BlockEventi()
 
@@ -110,7 +111,7 @@ Namespace AnagraficheSAP
         Private Sub GestioneCampiUtente()
             Try
                 Dim itmsGrpCod As Integer = oitmDb.GetValue("ItmsGrpCod", 0)
-                Log("FAMIGLIA SELEZIONATA " + itmsGrpCod.ToString())
+                'Log("FAMIGLIA SELEZIONATA " + itmsGrpCod.ToString())
 
                 genFld.Click()
 
